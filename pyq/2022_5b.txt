@@ -1,0 +1,16 @@
+A friend function is necessary to overload an operator in the following scenarios:
+
+Binary Operators: When you want to overload a binary operator (like +, -, *, etc.) and the 
+left operand is an object of a different class. For example, if you have a Matrix class and 
+you want to be able to multiply a Matrix object by an integer (e.g., 2 * matrix), you would 
+need to use a friend function.
+
+Stream Insertion and Extraction Operators: When you want to overload the stream insertion (<<) 
+and extraction (>>) operators. These operators are typically overloaded as friend functions 
+because the left operand is of type std::ostream or std::istream, which are different from the 
+class type for which these operators are being overloaded.
+
+Comparison Operators: When you want to overload comparison operators (like ==, !=, <, >, etc.) 
+and you want them to be able to work with different types of operands. For example, if you have 
+a Time class and you want to be able to compare a Time object with an integer, you would need to
+ use a friend function.
